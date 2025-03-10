@@ -1,18 +1,96 @@
-# Personal Project: Front End II - Hotel Rate Comparison API
+# To-Do List Application
 
-## Description
-This project is a personal endeavor for Front End II. Students were required to dedicate a total of 30 hours to build an individual project separate from the group assignment. For my personal project, I built an API using Firebase to host my data. Initially, I attempted to find a free hotel API, but they all required a subscription fee. Since this project was not for commercial purposes, I decided to create one myself.
+This is a web application for a simple to-do list, built with Express.js and Firebase for data storage. This application also demonstrates a the basic CRUD commands (Create, Read, Update, Delete) while using the Firebase Firestore API.
 
-The project aims to serve a third-party website that aggregates data from other agencies and returns a list of the best prices from partnering agencies. Due to the requirement of dedicating at least 30 hours to this project, I had limited time to fully develop it. However, the core concept remains intact. The project was built using Firebase and Node.js. The API compares third-party rates and provides customers with the best room rates within the USA for a specific area.
+## Features
 
-I also had difficulty setting up Firebase and securing the connection. To assist future developers, I have included the documentation I found and a sample .env file for easy setup.
+- Create new tasks
+- View all tasks
+- Mark tasks as completed
+- Delete tasks
+- Real-time updates with Firebase Firestore
+
+## Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Node.js, Express.js
+- **Database**: Firebase Firestore
+- **Dependencies**: dotenv, cors, firebase-admin
+
+## Demo
+
+[View Demo](...)
 
 ## Setup
 
-- `npm install` - Install the necessary dependencies.
-- `npm start` - Starts up a local server and updates on any JS or CSS/SCSS changes.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/TyroneMartin/cloudbase-db-todo-list
+   cd cloudbase-db-todo-list
+   ```
 
-## Generating your API key
-- You can also create your own API keys in the Google Cloud console, for example for development or debugging. Learn more about when this might be recommended later on this page.
+2. **Firebase Setup**:
+   - Create a project in the [Firebase Console](https://console.firebase.google.com/)
+   - Go to Project Settings > Service Accounts
+   - Click "Generate new private key" to download your service account JSON file
+   - Set up Firestore database in your Firebase project
 
-[Documentation for generating API keys](https://firebase.google.com/docs/projects/api-keys?hl=en&authuser=0&_gl=1*1947b0*_ga*NTMxMDM0ODMwLjE3MTg3MjEzNTE.*_ga_CW55HF8NVT*MTcyMDExMjY1Mi42LjEuMTcyMDExNDYzMi43LjAuMA..)
+3. **Environment Variables**:
+   - Create a `.env` file in the project root
+   - Add the following variables:
+   ```
+   databaseURL="https://your-project-id.firebaseio.com"
+   SERVICE_ACCOUNT_KEY={"type":"service_account",...} # Paste your entire service account JSON here
+   ```
+
+4. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+5. **Run the Application**:
+   ```bash
+   npm start
+   ```
+   For development with auto-restart:
+   ```bash
+   npm run dev
+   ```
+
+6. **Access the Application**:
+   - Open your browser and navigate to `http://localhost:3000`
+
+
+## API Endpoints
+
+The application provides the following RESTful API endpoints:
+
+- **GET /api/tasks**: Retrieve all tasks
+- **POST /api/tasks**: Create a new task
+- **PUT /api/tasks/:id**: Update a task's completion status
+- **DELETE /api/tasks/:id**: Delete a task
+
+## Troubleshooting
+
+### Firebase Connection Issues
+- Verify that your `.env` file contains the correct Firebase credentials
+- Ensure that Firestore is enabled in your Firebase project
+- Check that your service account has the necessary permissions
+
+### Application Not Loading
+- Make sure all dependencies are installed: `npm install`
+- Verify the server is running: `npm start`
+- Check the browser console for errors
+
+## Future Improvements
+
+- User authentication
+- Task categories/tags
+- Due dates for tasks
+- Task priorities
+- Filter and search functionality
+- Dark mode toggle
+
+## Hours Spent
+
+- Approximately 20-30 hours
