@@ -20,7 +20,7 @@ This project is a simple To-Do List application that uses **Cloud Firestore** as
 
 ## Demo
 
-[View Demo](...)
+[View Demo](https://youtu.be/XZr1huzZwdE)
 
 ## Setup
 
