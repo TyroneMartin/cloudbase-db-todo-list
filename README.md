@@ -1,6 +1,6 @@
 # To-Do List Application
 
-This is a web application for a simple to-do list, built with Express.js and Firebase for data storage. This application also demonstrates a the basic CRUD commands (Create, Read, Update, Delete) while using the Firebase Firestore API.
+This is a web application for a simple to-do list, built with Express.js and Firebase Firestore for data storage. This application also demonstrates a the basic CRUD commands (Create, Read, Update, Delete) while using the Firebase Firestore API.
 
 ## Features
 
